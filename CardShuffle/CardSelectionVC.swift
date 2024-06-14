@@ -12,6 +12,10 @@ class CardSelectionVC: UIViewController {
     let stopButton = CSButton(backgroundColor: .systemRed, title: "Stop!")
     let resetButton = CSButton(backgroundColor: .systemGreen, title: "Reset")
     let rulesButton = CSButton(backgroundColor: .systemBlue, title: "Rules")
+    
+    var cards: [UIImage] = CardDeck.allValues.compactMap { $0 }  // Filter out nil values
+    
+    var timer: Timer!
 
 
 
@@ -19,6 +23,7 @@ class CardSelectionVC: UIViewController {
         super.viewDidLoad()
         view.backgroundColor = .systemBackground
         configureUI()
+        startTimer()
 
         // Do any additional setup after loading the view.
     }
@@ -29,6 +34,23 @@ class CardSelectionVC: UIViewController {
         configureResetButton()
         configureRulesButton()
     }
+    
+    func startTimer() {
+          timer = Timer.scheduledTimer(timeInterval: 0.1, target: self, selector: #selector(showRandomCard), userInfo: nil, repeats: true)
+    }
+    
+    @objc func stopTimer() {
+        timer.invalidate()
+    }
+    
+    @objc func resetTimer() {
+        stopTimer()
+        startTimer()
+    }
+      
+      @objc func showRandomCard() {
+          cardImageView.image = cards.randomElement() ?? UIImage(named: "AS")
+      }
     
     func configureCardImageView() {
         //add an image element as you would drag in storyboard to screen
@@ -49,6 +71,8 @@ class CardSelectionVC: UIViewController {
     
     func configureStopButton() {
         view.addSubview(stopButton)
+        //call stop button action
+        stopButton.addTarget(self, action: #selector(stopTimer), for: .touchUpInside)
         
         NSLayoutConstraint.activate([
             stopButton.widthAnchor.constraint(equalToConstant: 260),
@@ -60,6 +84,7 @@ class CardSelectionVC: UIViewController {
     
     func configureResetButton() {
         view.addSubview(resetButton)
+        resetButton.addTarget(self, action: #selector(resetTimer), for: .touchUpInside)
         
         NSLayoutConstraint.activate([
             resetButton.widthAnchor.constraint(equalToConstant: 115),

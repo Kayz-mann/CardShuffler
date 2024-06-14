@@ -18,6 +18,7 @@
 		0D6E33DE2C1B379000633D3F /* CardSelectionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D6E33DD2C1B379000633D3F /* CardSelectionVC.swift */; };
 		0D6E33E02C1B389A00633D3F /* CSButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D6E33DF2C1B389A00633D3F /* CSButton.swift */; };
 		0D6E33E22C1C66F600633D3F /* RulesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D6E33E12C1C66F600633D3F /* RulesVC.swift */; };
+		0D6E33E42C1C820B00633D3F /* CardDeck.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D6E33E32C1C820B00633D3F /* CardDeck.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		0D6E33DD2C1B379000633D3F /* CardSelectionVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardSelectionVC.swift; sourceTree = "<group>"; };
 		0D6E33DF2C1B389A00633D3F /* CSButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSButton.swift; sourceTree = "<group>"; };
 		0D6E33E12C1C66F600633D3F /* RulesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RulesVC.swift; sourceTree = "<group>"; };
+		0D6E33E32C1C820B00633D3F /* CardDeck.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardDeck.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +112,7 @@
 				0D6E33DF2C1B389A00633D3F /* CSButton.swift */,
 				0D6E33DD2C1B379000633D3F /* CardSelectionVC.swift */,
 				0D6E33E12C1C66F600633D3F /* RulesVC.swift */,
+				0D6E33E32C1C820B00633D3F /* CardDeck.swift */,
 				0D6E33B62C1B360C00633D3F /* LaunchScreen.storyboard */,
 				0D6E33B92C1B360C00633D3F /* Info.plist */,
 			);
@@ -264,6 +267,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0D6E33E42C1C820B00633D3F /* CardDeck.swift in Sources */,
 				0D6E33DE2C1B379000633D3F /* CardSelectionVC.swift in Sources */,
 				0D6E33E22C1C66F600633D3F /* RulesVC.swift in Sources */,
 				0D6E33AC2C1B360B00633D3F /* AppDelegate.swift in Sources */,

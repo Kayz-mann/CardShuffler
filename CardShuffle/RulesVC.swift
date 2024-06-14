@@ -20,6 +20,7 @@ class RulesVC: UIViewController {
         
         configureTitleLabel()
         configureRulesLabel()
+        configureExcerciseLabel()
         
         
     }
@@ -69,5 +70,5 @@ class RulesVC: UIViewController {
             exerciseLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor)
         ])
     }
-     
+    
 }
