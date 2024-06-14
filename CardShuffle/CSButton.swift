@@ -24,6 +24,7 @@ class CSButton: UIButton {
         super.init(frame: .zero)
         self.backgroundColor = backgroundColor
         setTitle(title, for: .normal)
+        configure()
     }
     
     
